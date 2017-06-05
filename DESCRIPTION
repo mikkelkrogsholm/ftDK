@@ -1,0 +1,13 @@
+Package: ftDK
+Type: Package
+Title: A wrapper for the API of the Danish Parliament
+Version: 0.1.0.9999
+Author: Mikkel Freltoft Krogsholm
+Maintainer: Mikkel Freltoft Krogsholm <mikkel@56n.dk>
+Description: The package wraps the API of the Danish Parliament. It makes it 
+    possible to get data from the API easily into a data frame.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports: httr, pbapply, purrr, dplyr
+RoxygenNote: 6.0.1

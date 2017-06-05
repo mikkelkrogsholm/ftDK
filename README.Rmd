@@ -1,0 +1,47 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# ftDK
+
+The goal of `ftDK` is to provide an easy wrapper in R for the API of the Danish Parliament. You can see the website for the API her: http://www.ft.dk/AabneData.aspx
+
+## Installation
+
+You can install ftDK from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("mikkelkrogsholm/ftDK")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(ftDK)
+
+# See the avaible endpoints 
+see_endpoints()
+
+# Lets fetch the data for the "afstemning" endpoint
+ft_data  <- get_ft("afstemning")
+
+# Lets have a look at the data
+ft_data
+
+```
+
+This is a first version of the package. It does the job of pulling data from the API.
+Next up will be to create more elaborate functions. Please contribute to the package if you can.
