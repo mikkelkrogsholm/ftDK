@@ -76,7 +76,7 @@ get_ft <- function(endpoint){
   # Use an lapply loop to fetch data
   ft_data_list <- pbapply::pblapply(seqnr, function(i){
 
-    url <- paste0(base_url, "&$skip=", i)
+    url <- paste0(base_url, "&$skip=", as.integer(i))
 
     ft_data <- httr::GET(url)
     ft_data <- httr::content(ft_data)
