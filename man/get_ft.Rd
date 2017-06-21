@@ -16,9 +16,11 @@ a data frame with the data requested
 Get data from the API
 }
 \examples{
+
+\dontrun{
 library(ftDK)
 see_endpoints()
-
 ft_data  <- get_ft("afstemning")
 ft_data
+}
 }

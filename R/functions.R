@@ -1,6 +1,6 @@
 
 #### null_to_na #### ----
-# Is not export. It is a helper.
+# Is not exported. It is a helper.
 
 #' Turns NULL values in a list into NAs.
 #'
@@ -32,7 +32,7 @@ null_to_na <- function (mylist) {
 #' see_endpoints()
 
 see_endpoints <- function(){
-  api_endpoints$endpoint
+  ftDK::api_endpoints$endpoint
 }
 
 #### get_ft #### ----
@@ -45,11 +45,13 @@ see_endpoints <- function(){
 #' @export
 #'
 #' @examples
+#'
+#'\dontrun{
 #' library(ftDK)
 #' see_endpoints()
-#'
 #' ft_data  <- get_ft("afstemning")
 #' ft_data
+#' }
 
 get_ft <- function(endpoint){
 

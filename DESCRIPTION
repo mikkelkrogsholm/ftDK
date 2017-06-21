@@ -1,13 +1,19 @@
 Package: ftDK
 Type: Package
-Title: A wrapper for the API of the Danish Parliament
-Version: 0.1.0.9999
+Title: A Wrapper for the API of the Danish Parliament
+Version: 1.0
 Author: Mikkel Freltoft Krogsholm
 Maintainer: Mikkel Freltoft Krogsholm <mikkel@56n.dk>
-Description: The package wraps the API of the Danish Parliament. It makes it 
-    possible to get data from the API easily into a data frame.
-License: MIT
+Description: A wrapper for the API of the Danish Parliament. It makes it 
+    possible to get data from the API easily into a data frame. Learn more at 
+    <http://www.ft.dk/dokumenter/aabne_data>.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: httr, pbapply, purrr, dplyr
+Depends:
+    R (>= 2.10)
+Imports: httr, pbapply, purrr, dplyr, tibble
 RoxygenNote: 6.0.1
+URL: https://github.com/mikkelkrogsholm/ftDK
+BugReports: https://github.com/mikkelkrogsholm/ftDK/issues
+
