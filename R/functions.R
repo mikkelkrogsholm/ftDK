@@ -40,6 +40,7 @@ see_endpoints <- function(){
 #' Get data from the API
 #'
 #' @param endpoint is the endpoint in the API that you want data from.
+#' @param extraargs is aditional arguments to be used when calling the API - eg. filter
 #'
 #' @return a data frame with the data requested
 #' @export
@@ -53,7 +54,7 @@ see_endpoints <- function(){
 #' ft_data
 #' }
 
-get_ft <- function(endpoint){
+get_ft <- function(endpoint, extraargs = NULL){
 
   # Make local copy of the endpoints data frame
   endpoint_df <- ftDK::api_endpoints
@@ -63,6 +64,10 @@ get_ft <- function(endpoint){
 
   # Create a baseurl for that endpoint
   base_url <- paste0("http://oda.ft.dk/api/", href, "?$inlinecount=allpages")
+
+  if(!is.null(extraargs)){
+    base_url <- paste0(base_url, extraargs)
+  }
 
   # Get total page count
   ft_data <- httr::GET(base_url)
