@@ -63,7 +63,7 @@ get_ft <- function(endpoint, extraargs = NULL){
   href <- endpoint_df$href[which(endpoint_df$endpoint == endpoint)]
 
   # Create a baseurl for that endpoint
-  base_url <- paste0("http://oda.ft.dk/api/", href, "?$inlinecount=allpages")
+  base_url <- paste0("https://oda.ft.dk/api/", href, "?$inlinecount=allpages")
 
   if(!is.null(extraargs)){
     base_url <- paste0(base_url, extraargs)
