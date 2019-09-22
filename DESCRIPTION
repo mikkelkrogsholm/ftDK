@@ -13,7 +13,6 @@ LazyData: true
 Depends:
     R (>= 2.10)
 Imports: httr, pbapply, purrr, dplyr, tibble
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 URL: https://github.com/mikkelkrogsholm/ftDK
 BugReports: https://github.com/mikkelkrogsholm/ftDK/issues
-

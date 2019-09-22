@@ -4,10 +4,14 @@
 \alias{get_ft}
 \title{Get data from the API}
 \usage{
-get_ft(endpoint)
+get_ft(endpoint, extraargs = NULL, verbose = TRUE)
 }
 \arguments{
 \item{endpoint}{is the endpoint in the API that you want data from.}
+
+\item{extraargs}{is aditional arguments to be used when calling the API - eg. filter}
+
+\item{verbose}{if TRUE (default) tells you what is going on}
 }
 \value{
 a data frame with the data requested
@@ -15,12 +19,18 @@ a data frame with the data requested
 \description{
 Get data from the API
 }
+\details{
+See posible aditional arguments at \url{https://oda.ft.dk/Home/OdataQuery}
+
+To get a list of posible operators to use with the aditional arguments see
+\url{https://www.odata.org/documentation/odata-version-2-0/uri-conventions/}
+}
 \examples{
 
 \dontrun{
 library(ftDK)
 see_endpoints()
-ft_data  <- get_ft("afstemning")
+ft_data  <- get_ft("afstemning", "&$filter=vedtaget\%20eq\%20true")
 ft_data
 }
 }
